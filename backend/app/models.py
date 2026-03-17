@@ -71,7 +71,7 @@ class UsersPublic(SQLModel):
 class ItemBase(SQLModel):
     title: str = Field(min_length=1, max_length=255)
     description: str | None = Field(default=None, max_length=255)
-
+ 
 
 # Properties to receive on item creation
 class ItemCreate(ItemBase):
@@ -101,6 +101,9 @@ class ItemPublic(ItemBase):
     id: uuid.UUID
     owner_id: uuid.UUID
     created_at: datetime | None = None
+
+
+
 
 
 class ItemsPublic(SQLModel):
