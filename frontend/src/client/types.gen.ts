@@ -24,6 +24,7 @@ export type ItemPublic = {
     id: string;
     owner_id: string;
     created_at?: (string | null);
+    test?: (string | null)
 };
 
 export type ItemsPublic = {

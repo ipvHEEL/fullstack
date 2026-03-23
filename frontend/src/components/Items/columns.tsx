@@ -62,6 +62,24 @@ export const columns: ColumnDef<ItemPublic>[] = [
     },
   },
   {
+    accessorKey: "test",
+    header: "Test",
+    cell: ({ row }) => {
+      const test = row.original.test
+      console.log(test)
+      return (
+        <span
+          className={cn(
+            "max-w-xs truncate block text-muted-foreground",
+            !test && "italic",
+          )}
+        >
+          {test || "No test"}
+        </span>
+      )
+    },
+  },
+  {
     id: "actions",
     header: () => <span className="sr-only">Actions</span>,
     cell: ({ row }) => (
