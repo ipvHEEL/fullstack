@@ -4,7 +4,9 @@ ENV PYTHONUNBUFFERED=1
 
 # Install uv
 # Ref: https://docs.astral.sh/uv/guides/integration/docker/#installing-uv
+
 RUN pip install --no-cache-dir uv
+
 
 # Compile bytecode
 # Ref: https://docs.astral.sh/uv/guides/integration/docker/#compiling-bytecode
